@@ -1,12 +1,586 @@
-<section class="hero">
-  <div class="hero-text">
-    <h1>Scaling Growth Through Data-Driven Storytelling</h1>
-    <p>I'm Thabo Bhebhe — I help brands turn search, content & ads into measurable pipeline growth.</p>
-    <a href="#contact" class="btn-primary">Book a Free Growth Audit</a>
-  </div>
-  <div class="hero-logos">
-    <img src="mtn-logo.svg" alt="MTN">
-    <img src="cocacola.svg" alt="Coca-Cola">
-    <img src="hubspot.svg" alt="HubSpot Certified">
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thabo Bhebhe: Content & Performance Marketing Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL STYLES & VARIABLES --- */
+        :root {
+            --primary-navy: #0F1C3F; /* Deep Navy */
+            --accent-teal: #00A3A8;  /* Sophisticated Teal/Cyan */
+            --text-color: #333333;
+            --light-grey: #f8f9fa;
+            --heading-font: 'Lora', serif; /* Strong Serif for impact */
+            --body-font: 'Inter', sans-serif; /* Clean Sans-serif for readability */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        a {
+            color: var(--accent-teal);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-navy);
+            text-decoration: underline;
+        }
+
+        /* --- HEADER & CONTACT --- */
+        .header {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            padding: 50px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-family: var(--heading-font);
+            font-size: 3em;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            display: block;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+
+        .contact-info a:hover {
+            color: #ffc107; /* Gold accent on hover */
+        }
+
+        /* --- ABOUT ME SECTION --- */
+        .about-section {
+            padding: 50px 8%;
+            background-color: var(--light-grey);
+            border-bottom: 5px solid var(--accent-teal);
+        }
+
+        .about-section h2 {
+            font-family: var(--heading-font);
+            color: var(--primary-navy);
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .about-section strong {
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .impact-metrics {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .metric-item {
+            text-align: center;
+            width: 30%;
+        }
+
+        .metric-item h3 {
+            font-family: var(--heading-font);
+            font-size: 3.5em;
+            color: var(--accent-teal);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .metric-item p {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            color: var(--text-color);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* --- MAIN PORTFOLIO CONTENT --- */
+        .portfolio-container {
+            padding: 50px 8%;
+        }
+
+        h2.section-heading {
+            font-family: var(--heading-font);
+            color: var(--primary-navy);
+            font-size: 2.2em;
+            margin-bottom: 35px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2.section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-teal);
+        }
+
+        /* --- Case Studies --- */
+        .case-studies {
+            margin-bottom: 80px;
+        }
+
+        .case-study-item {
+            border: 1px solid #e0e0e0;
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .case-study-item:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-color: var(--accent-teal);
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .case-study-item h3 {
+            font-size: 1.6em;
+            color: var(--primary-navy);
+            margin: 0;
+            font-family: var(--heading-font);
+        }
+
+        .tag {
+            background-color: var(--accent-teal);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .case-goal {
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .case-result {
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-top: 20px;
+            border-top: 1px solid #e9ecef;
+            padding-top: 15px;
+            font-size: 1.1em;
+        }
+
+        .case-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .case-links li {
+            padding: 8px 0;
+            font-size: 0.95em;
+            border-left: 3px solid var(--accent-teal);
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* --- Content Gallery --- */
+        .filters {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background-color: #e9ecef;
+            color: var(--text-color);
+            border: 1px solid #ced4da;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .filter-btn:hover {
+            background-color: #ced4da;
+        }
+
+        .filter-btn.active {
+            background-color: var(--accent-teal);
+            color: white;
+            border-color: var(--accent-teal);
+            box-shadow: 0 2px 5px rgba(0, 163, 168, 0.4);
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .work-item {
+            background-color: var(--light-grey);
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .work-item h4 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            color: var(--primary-navy);
+            font-family: var(--heading-font);
+        }
+
+        .work-item p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            color: #6c757d;
+        }
+        
+        /* --- Skills Section --- */
+        .skills-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .skills-section h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: var(--primary-navy);
+            font-family: var(--heading-font);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skills-list span {
+            background-color: var(--accent-teal);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px; /* Pill shape */
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .tools-list span {
+            background-color: #ffe0b2; /* Light orange for tools */
+            color: var(--primary-navy);
+        }
+
+        /* --- CTA Section --- */
+        .cta-section {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 60px 8%;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-section h3 {
+            font-family: var(--heading-font);
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background-color: #ffc107; /* Bold gold/yellow */
+            color: var(--primary-navy);
+            padding: 18px 40px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #e0ac00;
+            color: var(--primary-navy);
+        }
+        
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .header, .about-section, .portfolio-container, .cta-section {
+                padding: 20px 5%;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-info {
+                text-align: left;
+                margin-top: 15px;
+            }
+            .impact-metrics {
+                flex-direction: column;
+            }
+            .metric-item {
+                width: 100%;
+                text-align: left;
+                padding: 15px 0;
+            }
+            .case-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .tag {
+                margin-top: 10px;
+            }
+            .filters {
+                flex-direction: column;
+            }
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // --- JAVASCRIPT FOR INTERACTIVITY ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const workItems = document.querySelectorAll('.work-item');
+
+            // Function to handle filter logic
+            const filterContent = (filterValue) => {
+                workItems.forEach(item => {
+                    const itemCategories = item.getAttribute('data-category').split(' ');
+
+                    if (filterValue === 'all' || itemCategories.includes(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            };
+
+            // Event listeners for filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+                    filterContent(filterValue);
+                });
+            });
+
+            // Initial load filter (shows all)
+            filterContent('all');
+        });
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>THABO BHEBHE</h1>
+            <h2>Performance & Content Strategy Manager</h2>
+        </div>
+        <div class="contact-info">
+            <a href="mailto:thabobhebhe@aol.com">thabobhebhe@aol.com</a>
+            <a href="https://linkedin.com/in/thabobhebhe" target="_blank">linkedin.com/in/thabobhebhe</a>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About Me: Your Performance Marketing Partner</h2>
+        <p>
+            I am a Strategic Digital Marketing Manager with **10+ years of experience** building integrated, data-driven marketing engines for global SaaS, tech, and FMCG brands. I specialize in scaling organic acquisition via **Technical & Local SEO** and maximizing returns on paid media across **Google, Meta, and LinkedIn**. I combine analytical rigor (GA4, SEMrush, Ahrefs) with creative storytelling (ex-journalist) to build brands that convert and scale.
+        </p>
+        
+        <div class="impact-metrics">
+            <div class="metric-item"><h3>120%</h3><p>Organic Traffic Growth (18 months)</p></div>
+            <div class="metric-item"><h3>4x ROI</h3><p>PPC Campaigns (R300k+/month budget)</p></div>
+            <div class="metric-item"><h3>85%</h3><p>Social Engagement Increase (12 months)</p></div>
+        </div>
+    </section>
+
+    <main class="portfolio-container">
+        
+        <section class="case-studies">
+            <h2 class="section-heading">Featured Case Studies: The Revenue Impact</h2>
+
+            <article class="case-study-item">
+                <div class="case-header">
+                    <h3>Case Study 1: Technical SEO & Organic Pipeline Growth</h3>
+                    <span class="tag">SEO Authority</span>
+                </div>
+                <p class="case-goal">**Goal:** Position clients (Promoflo, Out of the Box Ideas) as leaders by executing deep technical SEO audits, eliminating keyword cannibalization, and implementing schema markup.</p>
+                <ul class="case-links">
+                    <li><a href="https://promoflo.com/" target="_blank">Promoflo.com: Led implementation of on-page SEO, long-tail keywords, and **schema markup** across the site to improve indexing and performance.</a></li>
+                    <li><a href="https://outoftheboxideas.co.za/2021/06/29/how-to-start-a-successful-ecommerce-business/" target="_blank">Out of the Box Ideas: Wrote 2,000+ word E-commerce Pillar Content that achieved #1 ranking, validating E-E-A-T.</a></li>
+                </ul>
+                <p class="case-result">**Achieved:** Secured **Top 5 search rankings** for 50+ commercial keywords and drove **120% organic traffic growth** over 18 months, demonstrating technical and ranking capability.</p>
+            </article>
+            
+            <article class="case-study-item">
+                <div class="case-header">
+                    <h3>Case Study 2: Full-Funnel Paid Acquisition (PPC)</h3>
+                    <span class="tag">Paid Media & Ads</span>
+                </div>
+                <p class="case-goal">**Goal:** Optimize full-funnel PPC campaigns (Google Ads, Meta Ads, LinkedIn Ads) with R300,000+ monthly budgets to maximize ROI for SaaS/Tech clients (Silverstonecis, iFuel).</p>
+                <ul class="case-links">
+                    <li><a href="https://www.linkedin.com/in/thabobhebhe/" target="_blank">LinkedIn Campaigns: Built and optimized campaigns targeting VPs/CIOs for Silverstonecis, driving MQL conversion rates (See my profile for thought leadership).</a></li>
+                    <li><a href="https://web.facebook.com/PromoFlo/" target="_blank">Meta Ads (PromoFlo): Managed copy and creative direction for Facebook campaigns driving B2B leads.</a></li>
+                    <li><a href="https://mtnads.mtnmore.com/index/mtnads" target="_blank">MTN ADS: Created promotional content for telecommunications platforms, supporting conversion paths.</a></li>
+                </ul>
+                <p class="case-result">**Achieved:** Consistently delivered **4x ROI** on monthly PPC spend through rigorous A/B testing and content synergy. Improved social engagement by **85%** year-over-year.</p>
+            </article>
+
+        </section>
+
+        <section class="content-gallery">
+            <h2 class="section-heading">Content Gallery: The Execution Layer</h2>
+
+            <div class="filters">
+                <button class="filter-btn" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="seo">SEO & Long-Form</button>
+                <button class="filter-btn" data-filter="social">Paid/Social Media</button>
+                <button class="filter-btn" data-filter="short">Short-Form & UX Copy</button>
+                <button class="filter-btn" data-filter="tech">Technical/B2B/SaaS</button>
+            </div>
+
+            <div class="work-grid">
+
+                <div class="work-item" data-category="seo tech">
+                    <h4>Web Development CRO Content</h4>
+                    <p>Wrote high-value content focused on conversion rate optimization and site performance.</p>
+                    <a href="https://outoftheboxideas.co.za/2021/06/22/6-signs-your-website-needs-an-urgent-revamp/" target="_blank">View: 6 Signs Your Website Needs an Urgent Revamp</a>
+                </div>
+                <div class="work-item" data-category="seo short">
+                    <h4>E-commerce Mistakes Content (Shopify Focus)</h4>
+                    <p>Problem-solving content for E-commerce clients (Tesa Deals) to capture users at the bottom-of-the-funnel (BOFU).</p>
+                    <a href="https://outoftheboxideas.co.za/2021/06/22/6-ecommerce-mistakes-that-stop-customers-from-making-a-purchase/" target="_blank">View: 6 E-commerce Mistakes to Avoid</a>
+                </div>
+
+                <div class="work-item" data-category="short social">
+                    <h4>SportsMax Push Notifications & UX</h4>
+                    <p>Authored real-time, high-urgency push notifications and in-app messages to drive immediate app usage.</p>
+                    <a href="https://sportsmax.tv/" target="_blank">View SportsMax (Micro-Copy Example)</a>
+                </div>
+                <div class="work-item" data-category="short tech">
+                    <h4>Flashpanel Data Storytelling</h4>
+                    <p>Wrote concise, compelling data stories for the insights hub, translating complex data into business intelligence narratives.</p>
+                    <a href="https://jamaica.flashpanel.net/index/insights" target="_blank">View Insights Hub</a>
+                </div>
+                <div class="work-item" data-category="social tech">
+                    <h4>Insparta & Click Pulse LinkedIn Copy</h4>
+                    <p>Managed social content for multiple B2B and recruitment firms, focusing on brand authority and thought leadership.</p>
+                    <a href="https://www.linkedin.com/company/insparta-za/?viewAsMember=true" target="_blank">View Insparta LinkedIn</a>
+                </div>
+
+                <div class="work-item" data-category="social">
+                    <h4>Coca-Cola Beverages Corporate News</h4>
+                    <p>Official corporate news and communication writing, maintaining strict brand and legal standards.</p>
+                    <a href="https://www.cocacolapenbev.co.za/index/latest_news" target="_blank">View News</a>
+                </div>
+                 <div class="work-item" data-category="seo social">
+                    <h4>Tesa Deals E-commerce Content</h4>
+                    <p>Wrote high-volume, keyword-optimized product descriptions and promotional content for the e-commerce platform.</p>
+                    <a href="https://www.tesadeals.com/" target="_blank">View Tesa Deals Site</a>
+                </div>
+                <div class="work-item" data-category="tech">
+                    <h4>Varibox Industrial Blog Content</h4>
+                    <p>Wrote technical safety and compliance content for industrial logistics audiences (Varibox).</p>
+                    <a href="http://www.varibox.co.za/blog/" target="_blank">View Varibox Blog</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="skills-section">
+            <h2 class="section-heading">Core Marketing Stack & Competencies</h2>
+            <div class="skills-list">
+                <span>HubSpot Content Certified</span>
+                <span>HubSpot SEO Certified</span>
+                <span>PPC: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads</span>
+                <span>SEO & Technical Audits</span>
+                <span>Local SEO & GMB Optimization</span>
+                <span>B2B & SaaS Copywriting</span>
+                <span>Conversion Copywriting (CRO)</span>
+                <span>Shopify & E-commerce Optimization</span>
+                <span>Schema Markup & E-E-A-T Alignment</span>
+                <span>Full-Funnel Digital Strategy</span>
+            </div>
+            
+            <h3>Tools & Proficiency</h3>
+            <div class="skills-list tools-list">
+                <span>GA4 & Performance Analytics</span>
+                <span>Ahrefs & SEMrush</span>
+                <span>HubSpot (Automation/CMS)</span>
+                <span>HTML/CSS/CMS</span>
+                <span>Adobe Creative Suite</span>
+                <span>Jira/Asana (Project Management)</span>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h3>Ready to Scale Your Organic Growth and Paid Performance?</h3>
+            <p>I specialize in building content and performance strategies that deliver measurable, predictable pipeline growth. Let's discuss a partnership.</p>
+            <a href="mailto:thabobhebhe@aol.com" class="cta-button">Engage Thabo Now</a>
+        </section>
+
+    </main>
+</body>
+</html>
